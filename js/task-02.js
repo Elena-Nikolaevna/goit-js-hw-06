@@ -21,9 +21,8 @@ const newIngredientList = ingredients.map(nameIngridients => {
 ingredientElement.ingredientsList.append(...newIngredientList);
 //console.log(newIngredientList)
 
-/*
-+Создаст отдельный элемент <li>. Обзательно используй метод document.createElement().
-+Добавит название ингредиента как его текстовое содержимое.
-+Добавит элементу класс item.
-+После чего вставит все <li> за одну операцию в список ul#ingredients. 
-*/
+//+Создаст отдельный элемент <li>. Обзательно используй метод document.createElement().
+//+Добавит название ингредиента как его текстовое содержимое.
+//+Добавит элементу класс item.
+//+После чего вставит все <li> за одну операцию в список ul#ingredients. 
+
