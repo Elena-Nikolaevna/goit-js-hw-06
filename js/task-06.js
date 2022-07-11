@@ -1,23 +1,32 @@
-/* Напиши скрипт, который при потере фокуса на инпуте (событие blur), проверяет его содержимое на правильное количество введённых символов.
+const textInput = document.querySelector("#validation-input");
+//console.dir(textInput);
 
-<input
-  type="text"
-  id="validation-input"
-  data-length="6"
-  placeholder="Please enter 6 symbols"
-/>
-Сколько символов должно быть в инпуте, указывается в его атрибуте data-length.
-Если введено подходящее количество символов, то border инпута становится зелёным, если неправильное - красным.
-Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили в исходные файлы задания.
+const maxLengthTextInput = document.querySelector('input[data-length="6"]');
+//console.log(maxLengthTextInput.dataset.length);
 
-#validation-input {
-  border: 3px solid #bdbdbd;
+textInput.addEventListener("blur", onInputBlur);
+
+function onInputBlur(event) {
+  let inputValue = event.currentTarget.value
+  console.log(inputValue);
 }
 
-#validation-input.valid {
-  border-color: #4caf50;
-}
+/* textInput.addEventListener("focus", onInputFocus);
 
-#validation-input.invalid {
-  border-color: #f44336;
+textInput.addEventListener("change", onInputChange);
+textInput.addEventListener("input", onLicenseChange);
+
+function onInputFocus() {
+    console.log("инпут получил фокус - focus");
 } */
+
+/* function onInputBlur(event) {
+    console.log("инпут потерял фокус - blur");
+} */
+
+/* function onInputChange(event) {
+    console.log(event.currentTarget.value);
+}
+
+function onLicenseChange() {} */
+
