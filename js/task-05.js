@@ -1,7 +1,17 @@
 const refs = {
-    input: document.querySelector("#text"),
+    textInput: document.querySelector("#name-input"), // Строка ввода текста
+    output: document.querySelector("#name-output"), // Строка ответа и замены
 };
-console.log(refs.input);
+//console.dir(refs.textInput);
+//console.dir(refs.output);
+refs.textInput.oninput = function () {
+    /* if (refs.textInput.value === "") {
+        refs.output.innerHTML = "Anonymous";
+    } else refs.output.innerHTML = refs.textInput.value; */
+    refs.textInput.value === ""
+        ? (refs.output.innerHTML = "Anonymous")
+        : (refs.output.innerHTML = refs.textInput.value);
+};
 
 /* Напиши скрипт который, при наборе текста в инпуте 
 input#name-input (событие input), подставляет его 
