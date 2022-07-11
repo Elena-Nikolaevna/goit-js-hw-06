@@ -1,5 +1,5 @@
 const textInput = document.querySelector("#validation-input");
-console.log(textInput);
+console.dir(textInput);
 
 const maxLengthTextInput = document.querySelector('input[data-length="6"]');
 //console.log(maxLengthTextInput.dataset.length);
@@ -10,8 +10,7 @@ function onInputBlur(event) {
   const inputValue = event.currentTarget.value.length
   console.log(inputValue);
   if (inputValue <= maxLengthTextInput){
-    textInput.classList.remove("valid");
-    return textInput.classList.add("invalid");
+    
   }
 }
 
