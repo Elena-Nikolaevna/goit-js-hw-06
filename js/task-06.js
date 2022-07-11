@@ -1,5 +1,5 @@
 const textInput = document.querySelector("#validation-input");
-//console.dir(textInput);
+console.log(textInput);
 
 const maxLengthTextInput = document.querySelector('input[data-length="6"]');
 //console.log(maxLengthTextInput.dataset.length);
@@ -7,8 +7,12 @@ const maxLengthTextInput = document.querySelector('input[data-length="6"]');
 textInput.addEventListener("blur", onInputBlur);
 
 function onInputBlur(event) {
-  let inputValue = event.currentTarget.value
+  const inputValue = event.currentTarget.value.length
   console.log(inputValue);
+  if (inputValue <= maxLengthTextInput){
+    textInput.classList.remove("valid");
+    return textInput.classList.add("invalid");
+  }
 }
 
 /* textInput.addEventListener("focus", onInputFocus);
