@@ -1,35 +1,24 @@
 const textInput = document.querySelector("#validation-input");
-console.dir(textInput);
-
-const maxLengthTextInput = document.querySelector('input[data-length="6"]');
-//console.log(maxLengthTextInput.dataset.length);
-
+//console.dir(textInput);
 textInput.addEventListener("blur", onInputBlur);
 
 function onInputBlur(event) {
-  const inputValue = event.currentTarget.value.length
-  console.log(inputValue);
-  if (inputValue <= maxLengthTextInput){
-    
-  }
+    const maxLengthTextInput = +textInput.getAttribute("data-length");
+    //console.log(maxLengthTextInput);
+    const inputCurrent = event.currentTarget;
+    //console.log(inputCurrent);
+    const inputValueLength = inputCurrent.value.length;
+    //console.log(inputValue);
+
+    if (
+        inputValueLength < maxLengthTextInput ||
+        inputValueLength > maxLengthTextInput
+    ) {
+        inputCurrent.classList.remove("valid");
+        return inputCurrent.classList.add("invalid");
+    }
+    if (inputValueLength === maxLengthTextInput) {
+        inputCurrent.classList.remove("invalid");
+        return inputCurrent.classList.add("valid");
+    }
 }
-
-/* textInput.addEventListener("focus", onInputFocus);
-
-textInput.addEventListener("change", onInputChange);
-textInput.addEventListener("input", onLicenseChange);
-
-function onInputFocus() {
-    console.log("инпут получил фокус - focus");
-} */
-
-/* function onInputBlur(event) {
-    console.log("инпут потерял фокус - blur");
-} */
-
-/* function onInputChange(event) {
-    console.log(event.currentTarget.value);
-}
-
-function onLicenseChange() {} */
-
