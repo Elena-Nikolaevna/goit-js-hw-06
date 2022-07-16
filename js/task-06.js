@@ -22,3 +22,4 @@ function onInputBlur(event) {
         return inputCurrent.classList.add("valid");
     }
 }
+// +Если введено подходящее количество символов, то border инпута становится зелёным, если неправильное - красным
