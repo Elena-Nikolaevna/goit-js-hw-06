@@ -18,3 +18,6 @@ function onchengeColorButton() {
 //console.log(refs.bodyBackgroundColor);
 //console.log(refs.chengeColorBtn);
 //console.log(refs.requiredColor);
+
+
+// + Напиши скрипт, который изменяет цвета фона элемента <body> через инлайн стиль при клике на button.change-color и выводит значение цвета в span.color
