@@ -23,9 +23,10 @@ button {
     cursor: pointer;
 }
 
-.gallery__img {
+.gallery__img {    
     width: auto;
     height: 150px;
     margin: 10px;
+   
 }
 
