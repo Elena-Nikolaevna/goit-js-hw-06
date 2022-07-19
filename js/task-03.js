@@ -19,7 +19,8 @@ const newGallery = {
 const makeNewImages = images => {
     return images.map(({ url, alt }) => {
         return `<li class="gallery__item"><img class="gallery__img" src=${url} alt=${alt}></li>`;
-    });
+    })
+    .join("");
 };
 const newImages = makeNewImages(images);
 
